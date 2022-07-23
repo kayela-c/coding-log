@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style-clot.css"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+	<style>
+	.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  * {
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    background-color: #333;
+
+
+    overflow: auto;
+  }
+  
+  button {
+    display: block;
+    background-color: rgb(223, 197, 197);
+    color: #000;
+    font-weight: bold;
+    line-height: 2.5;
+    border: none;
+    padding: 0 15px;
+    width: 150px;
+    text-align: center;
+    font-size: medium;
+    cursor: pointer;
+
+    /* margin-top: 1rem; */
+  }
+   
+  button:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.6), 0px 12px 50px 0px rgba(0, 0, 0, 0.19);
+      /* box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
+      horizontal value, vertical value, blur value, spread value, inset or outset, color;
+      you can have multiple shadows
+      */
+
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .flex-row {
+    flex-direction: row;
+  }
+  
+  .row-rev {
+    flex-direction: row-reverse;
+  }
+  
+  .row-post {
+    margin: 2rem;
+    height: 100%;
+
+
+
+
+  }
+  
+  .row-img {
+    min-width: 260px;
+    height: 260px;
+    background-image: url("img/damian-z.jpg");
+    background-size: cover;
+    background-position: center; 
+  }
+
+  .row div:nth-last-of-type(2){
+    box-shadow: -30px -30px 0px 0px rgb(240, 224, 224), 0px 12px 50px 0px rgba(0, 0, 0, 0.19);
+  }
+
+  .row-rev div:nth-last-of-type(2) {
+    box-shadow: 30px -30px 0px 0px rgb(240, 224, 224), 0px 12px 50px 0px rgba(0, 0, 0, 0.19);
+
+  }
+  
+  .post {
+    /* border: 1px solid black; */
+    background-color: #fff;
+    padding: 5rem 3rem 5rem 3rem;
+    height: 250px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  
+  .post-snippet {
+    max-width: 300px;
+  }
+ 
+  #post-con {
+    /* background: rgb(232, 216, 216); */
+    margin-bottom: 0;
+  }
+  
+  #banner {
+    background: #000 url("img/laptops.jpg") no-repeat center;
+    background-size: cover;
+    height: 300px;
+    margin-bottom: 4rem;
+    z-index: -1;
+  }
+  
+  #inner-box-banner {
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 200px;
+    width: 70%;
+    z-index: 1;
+    margin: auto;
+  }
+  
+  #heading {
+    text-transform: uppercase;
+    text-align: center;
+	font-weight: bold;
+    color: #333;
+  }
+  
+  #intro {
+    text-align: center;
+    padding: 1rem 8rem;
+  }
+  
+  #intro-con {
+    color: #eee;
+  }
+  /*  */
+  
+  .divider {
+    background-color: gray;
+    height: 2px;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+  }
+  
+  #footer {
+    background-color: gray;
+    height: 75px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  #footer-info {
+    width: 100%;
+    color: white;
+    margin-left: 2rem;
+    padding: 2rem;
+  }
+  
+  /* #p063022 {} */
+
+  
+	</style>
+    <title>Clog</title>
+  </head>
+
+  <body>
+    <!-- wrapper -->
+    <div id="wrapper">
+      <!-- hero area -->
+
+      <div id="banner" class="d-flex justify-content-center align-items-center">
+        <div id="inner-box-banner" class="d-flex justify-content-center align-items-center">
+          <h1 id="heading">Welcome to my coding log</h1>
+        </div>
+      </div>
+      <!-- Intro Section -->
+      <div id="intro-con">
+        <div class="divider"></div>
+        <p id="intro">
+          Hello there! My name is Kayela and I'm a hardworking single mom
+          looking to change my life by learning how to code! It's something I
+          always feared and didn't think I could do. I'm documenting my journey
+          in hopes I can show my progress and look back to see how far I have
+          come. Thank you for stopping by!
+        </p>
+        <div class="divider"></div>
+      </div>
+
+      <!-- below here are my blog posts -->
+      <div id="post-con">
+        <!-- start of post-con -->
+        <div class="post" id="p063022">
+          <div class="row-img"></div>
+          <div class="row-post">
+            <h2>Post One</h2>
+            <p class="post-date">6.29.22</p>
+            <p class="post-snippet">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam,
+              optio minima atque hic eius iure!
+              <button class="btn post-btn" id="p063022">Read</button>
+            </p>
+          </div>
+        </div>
+        <!-- post two -->
+        <div class="post" id="p062922">
+          <!-- double check fles rows for redudency -->
+          <div class="row-img"></div>
+          <div class="row-post">
+            <h2>Post two</h2>
+            <p class="post-date">6.30.22</p>
+            <p class="post-snippet">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
+              error hic quos explicabo a assumenda!
+              <button class="btn post-btn" id="p063022">Read</button>
+            </p>
+          </div>
+        </div>
+        <!-- end of post-con -->
+      </div>
+      <footer id="footer">
+        <div id="footer-info">Kayela Ceron &copy 2022</div>
+      </footer>
+	  <!-- sripts -->
+	  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </body>
+    </div>
+</html>
